@@ -1,0 +1,41 @@
+/*
+ Document : styles.css
+ Created on : 1 sept. 2018, 09:24:00
+ Author : Pascal CROCHARD
+ Description: CSS pour le thème Nolark
+*/
+
+h1 {
+ color: red;
+ text-align: center;
+}
+
+header{
+	border-color: blue;
+	border-style: solid;
+}
+
+nav{
+	border-color: orange;
+	border-style: solid;
+}
+
+article{
+	border-color: green;
+	border-style: solid;
+}
+
+aside{
+	border-color: yellow;
+	border-style: solid;
+}
+
+footer{
+	border-color: grey;
+	border-style: solid;
+}
+
+.arthema{
+	border-color: cyan;
+	border-style: dotted;
+}
