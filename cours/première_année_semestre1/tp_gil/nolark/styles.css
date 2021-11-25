@@ -1,0 +1,30 @@
+/*
+ Document : styles.css
+ Created on : 1 sept. 2018, 09:24:00
+ Author : Pascal CROCHARD
+ Description: CSS pour le thème Nolark
+*/
+
+*{
+    font-family:"Montserrat"; /*police par défaut*/
+    box-sizing: berderbox; /*Les tailles de conteneurs incluent bordures et
+                             remplissages*/
+    margin:0; /*mise à 0 des marges externes*/
+    padding:0; /*mise à 0 des marges internes*/ 
+    text-decoration:none; /*suppression de la mise en forme habituelle des liens
+                            (soulignement)*/
+}
+
+/*définition de la police "montserrat"*/
+@font-face{
+    font-family: "Montserrat";
+    src: url("Montserrat-regular.ttf") format("truetype");
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    algin-items:center;
+    width:100%;
+}
