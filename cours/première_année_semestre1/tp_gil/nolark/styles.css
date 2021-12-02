@@ -22,9 +22,62 @@
 }
 
 body{
+    display: flex; /*Ce conteneur est "flexible"*/
+    justify-content: center; /*Les éléments portés sont centrés à l'horizontal*/
+    flex-direction:column; /*Les éléments sont emplilés*/
+    algin-items:center; /*Les éléments portés sont centrés à la verticale*/
+    width:100%; /*la page occupe toute la largeur*/
+}
+
+header{
+    width: 916px; /*Les headers et sections occupent 916 pixels (taille de la bannière)*/
+    display:flex;
+    flex-direction: column; /*Les éléments sont empilés*/
+}
+
+nav ul{
     display: flex;
-    justify-content: center;
-    flex-direction:column;
-    algin-items:center;
-    width:100%;
+    flex-direction:row; /*Les élément sont mis en ligne côte à côte*/
+    justify-content:space-between; /*les éléments sont repartis équitablement*/
+    background-color:black; /*couleur de fond*/
+}
+
+nav ul li{
+    display:flex;
+    justify-content:row;
+    list-style-type:none; /*cette liste n'a pas de puce*/
+    font-size:x-large; /*Le texte est grossi en XXL*/
+    flex-grow:1; /*L'espace occupé est élargie*/
+}
+
+nav ul li a{
+    padding:10px;/*marge interieure*/
+    color:white;/*couleur du texte*/
+}
+
+nav ul li:hover{
+    background-color:#9a330a; /*couleur de fond au passage de la souris*/
+}
+
+section{
+    width:916px; /*Les sections occupent 916px (taille bannière)*/
+}
+
+#principal{
+    margin-top:10px;
+    display:flex;
+    flex-direction:row;
+    text-align:justify;
+}
+#principal article{
+    flex:1; /*écriture raccourcie: flex-grow:1 et flex-shrink:1 =chaque élément occupe l'espace idéal (le + et le - à la fois)*/
+}
+
+#principal article img{
+    float:left;
+    margin-right:10px;
+}
+
+principal article p{
+    padding-top:16px
 }
