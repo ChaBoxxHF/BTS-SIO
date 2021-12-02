@@ -1,0 +1,185 @@
+/*
+ Document : styles.css
+ Created on : 1 sept. 2018, 09:24:00
+ Author : Pascal CROCHARD
+ Description: CSS pour le thème Nolark
+*/
+
+*{
+    font-family:"Montserrat"; /*police par défaut*/
+    box-sizing: border-box; /*Les tailles de conteneurs incluent bordures et
+                             remplissages*/
+    margin:0; /*mise à 0 des marges externes*/
+    padding:0; /*mise à 0 des marges internes*/ 
+    text-decoration:none; /*suppression de la mise en forme habituelle des liens
+                            (soulignement)*/
+}
+
+/*définition de la police "montserrat"*/
+@font-face{
+    font-family: "Montserrat";
+    src: url("polices/Montserrat-regular.ttf") format("truetype");
+}
+
+body{
+    display: flex; /*Ce conteneur est "flexible"*/
+    justify-content: center; /*Les éléments portés sont centrés à l'horizontal*/
+    flex-direction:column; /*Les éléments sont emplilés*/
+    align-items:center; /*Les éléments portés sont centrés à la verticale*/
+    width:100%; /*la page occupe toute la largeur*/
+}
+
+header{
+    width: 916px; /*Les headers et sections occupent 916 pixels (taille de la bannière)*/
+    display:flex;
+    flex-direction: column; /*Les éléments sont empilés*/
+}
+
+nav ul{
+    display: flex;
+    flex-direction:row; /*Les élément sont mis en ligne côte à côte*/
+    justify-content:space-between; /*les éléments sont repartis équitablement*/
+    background-color:black; /*couleur de fond*/
+}
+
+nav ul li{
+    display:flex;
+    justify-content:center;
+    list-style-type:none; /*cette liste n'a pas de puce*/
+    font-size:x-large; /*Le texte est grossi en XXL*/
+    flex-grow:1; /*L'espace occupé est élargie*/
+}
+
+nav ul li a{
+    padding:10px;/*marge interieure*/
+    color:white;/*couleur du texte*/
+}
+
+nav ul li:hover{
+    background-color:#9a330a; /*couleur de fond au passage de la souris*/
+}
+
+section{
+    width:916px; /*Les sections occupent 916px (taille bannière)*/
+}
+
+#principal{
+    margin-top:10px;
+    display:flex;
+    flex-direction:row;
+    text-align:justify;
+}
+#principal article{
+    flex:1; /*écriture raccourcie: flex-grow:1 et flex-shrink:1 =
+            chaque élément occupe l'espace idéal 
+            (le + et le - à la fois)*/
+}
+
+#principal article img{
+    float:left;
+    margin-right:10px;
+}
+
+principal article p{
+    padding-top:16px
+}
+
+#principal aside{
+    display:flex;
+    flex-direction:column;
+    margin-left:16px;
+    width:238px;
+    background: transparent url('images/post-it-conseils.png') no-repeat 0 0; /*fond*/
+    font-size:small;
+    font-weight:bold;
+    padding-left:35px;
+    padding-bottom:60px;
+}
+
+#principal aside img:first-child{
+    margin-top:110px;
+}
+
+#principal aside img{
+    align-self:center;
+}
+#principal aside img:nth-child(3){
+    margin-top:20px;
+}
+
+#thematique {
+    display: flex; /* Ce conteneur est "flexible" */
+    flex-wrap: wrap; /* Les éléments sont placés sur plusieurs lignes */
+    margin-bottom: 45px; /* Marge basse (correspond à la hauteur du footer + 10px) */
+}
+
+h1 {
+    color: #ff6811; /* Couleur du texte */
+    text-align: center; /* Le texte est centré */
+    font-size: xx-large; /* Le texte est grossi en XXL */
+}
+
+#thematique h1 {
+    width: 100%; /* Le titre occupe toute la largeur */ 
+    margin-bottom: 10px; /* Marge basse */
+}
+
+#thematique article {
+    flex: 1; /* flex-grow: 1 et flex-shrink:1 = Chaque élément occupe l'espace idéal (le + et le - à la fois) */
+    height: 256px; /* Hauteur */
+    border: transparent thin solid; /* Bordure transparente */
+    display: flex; /* Ce conteneur est "flexible" */
+    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
+}
+
+/* Définition de la police "Nordic" */
+@font-face{ 
+    font-family: "Nordic";
+    src: url('polices/Nordic.ttf') format("truetype");
+}
+
+#thematique a {
+    font-family: 'Nordic'; /* Police à utiliser */
+    font-size: xx-large; /* Le texte est grossi en XXL */
+    color: black; /* Couleur du texte */
+    
+}
+
+#gauche:hover, #milieu:hover, #droite:hover {
+    border: black thin solid; /* Bordure au passage de la souris */
+    border-radius: 10px; /* Bords arrondis au passage de la souris */
+    background-color: #ededed; /* Fond au passage de la souris */
+}
+
+#gauche {
+    background: transparent url('images/casqueroute.png') no-repeat center 10px; /* Fond */
+}
+
+#milieu {
+    background: transparent url('images/casquecross.png') no-repeat center 0; /* Fond */
+}
+
+#droite {
+    background: transparent url('images/casquepiste.png') no-repeat center 10px; /* Fond */
+}
+
+footer {
+    display: flex; /* Ce conteneur est "flexible" */
+    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
+    align-items: center; /* Les éléments portés sont centrés à la verticale */
+    position: fixed; /* Le conteneur est fixé en fonction de ses coordonnées (à 0px du bas) */
+    bottom: 0px; /* Bas */
+    height: 25px; /* Hauteur */
+    width: 100%; /* Le pied de page occupe toute la largeur */ 
+    background-color:#2d2d2d; /* Couleur de fond */
+    color: #bbb; /* Couleur du texte */
+    text-align:center; /* Texte centré */
+}
+
+footer p {
+    font-size: large; /* Le texte est grossi en L */
+}
+
+footer a{
+    color: inherit; /* Couleur du lien identique à celle du conteneur */
+}
