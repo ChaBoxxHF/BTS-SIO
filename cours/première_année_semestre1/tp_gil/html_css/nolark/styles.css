@@ -7,7 +7,7 @@
 
 *{
     font-family:"Montserrat"; /*police par défaut*/
-    box-sizing: berderbox; /*Les tailles de conteneurs incluent bordures et
+    box-sizing: border-box; /*Les tailles de conteneurs incluent bordures et
                              remplissages*/
     margin:0; /*mise à 0 des marges externes*/
     padding:0; /*mise à 0 des marges internes*/ 
@@ -25,7 +25,7 @@ body{
     display: flex; /*Ce conteneur est "flexible"*/
     justify-content: center; /*Les éléments portés sont centrés à l'horizontal*/
     flex-direction:column; /*Les éléments sont emplilés*/
-    algin-items:center; /*Les éléments portés sont centrés à la verticale*/
+    align-items:center; /*Les éléments portés sont centrés à la verticale*/
     width:100%; /*la page occupe toute la largeur*/
 }
 
@@ -44,7 +44,7 @@ nav ul{
 
 nav ul li{
     display:flex;
-    justify-content:row;
+    justify-content:center;
     list-style-type:none; /*cette liste n'a pas de puce*/
     font-size:x-large; /*Le texte est grossi en XXL*/
     flex-grow:1; /*L'espace occupé est élargie*/
@@ -71,6 +71,7 @@ section{
 }
 #principal article{
     flex:1; /*écriture raccourcie: flex-grow:1 et flex-shrink:1 =chaque élément occupe l'espace idéal (le + et le - à la fois)*/
+    justify-content:flex-start;
 }
 
 #principal article img{
@@ -80,4 +81,27 @@ section{
 
 principal article p{
     padding-top:16px
+}
+
+#principal aside{
+    display:flex;
+    flex-direction:column;
+    margin-left:16px;
+    width:238px;
+    background: transparent url('post-it-conseils.png') no-repeat 0 0; /*fond*/
+    font-size:small;
+    font-weight:bold;
+    padding-left:35px;
+    padding-bottom:60px;
+}
+
+#principal aside img:first-child{
+    margin-top:110px;
+}
+
+#principal aside img{
+    align-self:center;
+}
+#principal aside img:nth-child(3){
+    margin-top:20px;
 }
