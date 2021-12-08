@@ -8,3 +8,91 @@ and open the template in the editor.
     Author     : pascal.crochard
 */
 
+#casques{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    margin-bottom:45px;
+}
+
+#casques article{
+    width: 163px;
+    height: 275px;
+    margin: 10px;
+    padding: 5px;
+    border: white thin solid;
+    position: relative;
+}
+
+#casques article img{
+    margin-left: 6px;
+}
+
+#casques article:hover{
+    border: #bbb thin solid;
+}
+
+#casque prix{
+    color: red;
+    font-wight: bold;
+    margin-bottom: 10px;
+}
+
+#casques .marque{
+    text-transform:uppercase;
+    font-family:"Nordic";
+    font-size: x-elarge;
+    display: inline;
+    white-space: nowrap;
+    font-weight:bold;
+}
+
+#casques .modele{
+    text-transform: capitalize;
+}
+
+#casque .stockok, #casques .stockko{
+    float:right;
+    text-transform: uppercase;
+    padding: 2px;
+}
+
+#casques .stockok{
+    background-color: chartreuse;
+}
+
+#casques .stockko{
+    background-color:red;
+    color: white;
+}
+
+[data-tip]{
+    position:relative;
+    cursor:help;
+}
+
+[data-tip]:hover::before{
+    content:"";
+    top:12px;
+    left:10px;
+    position:absolute;
+    
+    /*création d'un triangle à l'aide des bordures*/
+    border-bottom:12px solid fuchsia;
+    border-top:5px solid transparent;
+    border-left: 8px solid transparent;
+    border-right:8px solid transparent;
+}
+
+[data-tip]:hover::after{
+    text-transform:none;
+    content:attr(data-tip);
+    position:absolute;
+    topp:28px;
+    left:10px;
+    white-space:nowrap;
+    padding: 5px 10px;
+    background-color:fuchsia;
+    color:white;
+    z-index:1;
+}
